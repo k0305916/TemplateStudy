@@ -21,7 +21,9 @@ public:
     T const &top() const //return pop element;
     {
         //这个地方，若是使用vector的话，是不存在top()的。。。那应该怎么处理呢？
-        return elems.top();
+        //----即，需要修改成所有Container都具有的Function。
+        // return elems.top();
+        return elems.front();
     }
     bool empty() const //return whether the stack is empty
     {
@@ -52,6 +54,7 @@ int main()
 {
     //Stack for ints using a vector as an internal container
     //???为什么这个地方还需要使用std::vector<int>???定义上不是已经使用std::deque了嘛？？？
+    //因为就是为了再使用别的container以例子说明。
     Stack<int, std::vector<int>> vStack;
 
     vStack.push(42);
