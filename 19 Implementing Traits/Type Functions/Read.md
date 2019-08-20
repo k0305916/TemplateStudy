@@ -4,6 +4,8 @@
 * Transformation Traits: In addition to providing access to particular aspects of a main parameter type, traits can also perform transformations on types, such as adding or removing references or const and volatile qualifiers.
     * Remove References
     * Adding References
+    * Removing Qualifiers
+    * Decay
 
 ###Example(Element Types):
 
