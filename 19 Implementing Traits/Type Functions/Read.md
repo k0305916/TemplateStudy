@@ -6,6 +6,9 @@
     * Adding References
     * Removing Qualifiers
     * Decay
+* Predicate Traits
+    * IsSame
+    * True_type and False_type
 
 ###Example(Element Types):
 
