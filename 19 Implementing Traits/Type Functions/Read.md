@@ -9,6 +9,7 @@
 * Predicate Traits
     * IsSame
     * True_type and False_type
+* Result Type Traits: is very useful when writing operator templates.
 
 ###Example(Element Types):
 
