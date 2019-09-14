@@ -84,6 +84,25 @@ constexpr auto isDefaultConstructible = isValid(
 
     });
 
+constexpr auto isDefaultConstructible = [](auto&&... args)
+{
+    return decltype(isValidImpl<decltype([](auto x) -> 
+    decltype((void)decltype(valueT(x))())),decltype(args)&&...>(nullptr))
+    {
+
+    };
+}
+
+template<typename T>
+using IsDefaultConstructibleT = decltype(isDefaultConstructible(std::declval<T>()));
+
+//However, once isValid is in place and understood, 
+//many traits can be implementwith just one declaration
+//example:
+constexpr auto hasFirst = isValid([](auto x) -> decltype((void)valueT(x).first)
+{
+});
+
 
 int main()
 {
