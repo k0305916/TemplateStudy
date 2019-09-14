@@ -10,6 +10,10 @@
     * IsSame
     * True_type and False_type
 * Result Type Traits: is very useful when writing operator templates.
+* SFINAE-Based Traits:
+    * SFINAE out functions overloads;
+    * SFINAE out parital specializations;
+
 
 ###Example(Element Types):
 
