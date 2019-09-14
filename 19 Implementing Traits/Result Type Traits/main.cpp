@@ -33,5 +33,7 @@ using PlusResutl = typename PlusResultT<T1, T2>::Type;
 
 int main()
 {
+    PlusResutlT<int,double> a;
+    PlusResutlT<int,std::string>::Type b;
     return 1;
 }

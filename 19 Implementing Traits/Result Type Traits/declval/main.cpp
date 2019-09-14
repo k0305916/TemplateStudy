@@ -26,6 +26,6 @@ using PlusResult = typename PlusResultT<T1, T2>::Type;
 int main()
 {
     PlusResult<int,double> a;
-    std::cout << typeid(a).name<<'\n';
+    std::cout << typeid(a).name()<<'\n';
     return 1;
 }
