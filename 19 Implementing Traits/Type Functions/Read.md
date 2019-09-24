@@ -13,6 +13,9 @@
 * SFINAE-Based Traits:
     * SFINAE out functions overloads;
     * SFINAE out parital specializations;
+    * Using Generic Lambdas for SFINAE;
+    * SFINAE-Firendly Traits;
+* IsConvertibleT: SFINAE-based traits might become more complicated in practice. Let’s illustrate this by defining a trait that can determine whether a given type is convertible to another given type
 
 
 ###Example(Element Types):

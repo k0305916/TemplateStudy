@@ -1,5 +1,6 @@
 #include <iostream>
 #include <utility>
+#include <type_traits>  //for true_type, false_type, and void_t
 
 template<typename T1, typename T2>
 struct PlusResultT
@@ -77,6 +78,52 @@ void addAB(Array<A> const& arrayA, Array<B> const& arrayB)
     auto sum = arrayA + arrayB;
     //...                               //instantiates PlusResultT<A,B>
 }
+
+
+//implement
+//primary template:
+template<typename, typename, typename = std::void_t<>>
+struct HasPlusT : std::false_type
+{
+};
+
+//partial specialization (may be SFINAE'd away):
+template<typename T1, typename T2>
+struct HasPlusT<T1, T2, std::void_t<decltype(std::declval<T1>() + std::declval<T2>())>> : std::true_type
+{
+};
+
+
+//pluse3.cpp
+template<typename T1, typename T2, bool = HasPlusT<T1, T2>::value>
+struct PlusResultT          //parimary template, used when HasPlusT yields true
+{
+    using Type = decltype(std::declval<T1>() + std::declval<T2>());
+};
+
+template <typename T1, typename T2>
+struct PlusResultT<T1, T2, false>           //partial specialization, used otherwise
+{
+    
+};
+
+
+//another sample
+template<typename C, bool = HasMemberT_value_type<C>::value>        //typename的定义template的使用方式
+struct ElementT
+{
+    using Type = typename C::value_type;            //typename的嵌套从属类型的使用方式
+};
+
+template<typename C>
+struct ElementT<C,false>
+{
+};
+
+
+
+
+
 
 
 int main()
