@@ -64,6 +64,7 @@ using IsConvertible = typename IsConvertibleT<FROM, TO>::Type;
 template<typename FROM, typename TO>
 constexpr bool isConvertible = IsConvertibleT<FROM, TO>::value;         //value是默认拥有的？
 
+//C++ standard library: std::is_convertible<>
 
 int main()
 {

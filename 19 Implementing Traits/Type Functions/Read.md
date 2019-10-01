@@ -16,6 +16,10 @@
     * Using Generic Lambdas for SFINAE;
     * SFINAE-Firendly Traits;
 * IsConvertibleT: SFINAE-based traits might become more complicated in practice. Let’s illustrate this by defining a trait that can determine whether a given type is convertible to another given type
+* Detecting Member:
+    * Detecting Member Types;
+    * Injected Class Names;
+    * Detecting Arbitrary Member Types;
 
 
 ###Example(Element Types):
