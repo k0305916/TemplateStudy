@@ -44,10 +44,11 @@ int main()
     {
     });
     
-    cout << "hasLess(42,type<char>): " << hasLess(type<int>,type<char>) << "\n";         //yields true
-    cout << "hasLess(42,type<char>): " << hasLess(type<int>,type<char>) << "\n";         //yields false?
+    cout << "hasLess(type<int>,type<char>): " << hasLess(type<int>,type<char>) << "\n";         //yields true
+    cout << "hasLess(42,type<char>): " << hasLess(42, type<char>) << "\n";         //yields false?
     cout << "hasLess(type<string>,type<string>): " << hasLess(type<string>,type<string>) << "\n";         //yields true
     cout << "hasLess(type<string>,type<int>): " << hasLess(type<string>,type<int>) << "\n";         //yields false
-    cout << "hasLess(type<string>,\"hello\"): " << hasLess(type<string>,type<char*>) << "\n";         //yields true
+    cout << "hasLess(type<string>,type<char*>): " << hasLess(type<string>,type<char*>) << "\n";         //yields true
+    cout << "hasLess(type<string>,\"hello\"): " << hasLess(type<string>,"Hello") << "\n";         //yields false?   hello: const char*?
     return 1;
 }
