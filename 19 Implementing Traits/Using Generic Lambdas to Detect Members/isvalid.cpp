@@ -44,8 +44,8 @@ int main()
     {
     });
     
+    //最终的输出结果与想象的答案不一样。。。。不知道是不是底层环境所致。
     cout << "hasLess(42,type<char>): " << hasLess(type<int>,type<char>) << "\n";         //yields true
-    cout << "hasLess(42,type<char>): " << hasLess(type<int>,type<char>) << "\n";         //yields false?
     cout << "hasLess(type<string>,type<string>): " << hasLess(type<string>,type<string>) << "\n";         //yields true
     cout << "hasLess(type<string>,type<int>): " << hasLess(type<string>,type<int>) << "\n";         //yields false
     cout << "hasLess(type<string>,\"hello\"): " << hasLess(type<string>,type<char*>) << "\n";         //yields true

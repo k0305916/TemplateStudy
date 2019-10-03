@@ -20,6 +20,7 @@
     * Detecting Member Types;
     * Injected Class Names;
     * Detecting Arbitrary Member Types;
+* Using Generic Lambdas to Detect Members.
 
 
 ###Example(Element Types):
