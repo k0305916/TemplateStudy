@@ -37,3 +37,6 @@ T sumOfElements(C const& c);
 template<typename C>
 typename ElementT<C>::Type sumOfElement(C const& c);
 ```
+
+### Tips:
+1. A move constructor should be marked noexcept;
